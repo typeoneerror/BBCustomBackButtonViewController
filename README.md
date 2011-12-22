@@ -1,6 +1,6 @@
 If you've done any iOS development, you know that even though many things are very easy to customize, sometimes, things that seem very easy are not. For example, you cannot change the text color on the Back button very easily. If you want to make your own Back Button, it's relatively easy. Just instantiate a `UIBarButton` item and set it to the `leftBarButtonItem` property of the `navigationBar`. Unfortunately, doing this renders the button as a static, non-animating plain old button, so you lose that nice animation in between view controllers.
 
-This project shows a quick method for creating a completely custom back button that does all the in/out animated goodness for you. Just set the base class of your UIViewControllers to a class like `[BBCustomBackButtonViewController](https://github.com/typeoneerror/BBCustomBackButtonViewController/blob/master/BBCustomBackButtonViewController/BBCustomBackButtonViewController.m)`. When views appear or disappear, it'll automatically animate your back buttons in and out similar to Apple's standard UI.
+This project shows a quick method for creating a completely custom back button that does all the in/out animated goodness for you. Just set the base class of your UIViewControllers to a class like [BBCustomBackButtonViewController](https://github.com/typeoneerror/BBCustomBackButtonViewController/blob/master/BBCustomBackButtonViewController/BBCustomBackButtonViewController.m). When views appear or disappear, it'll automatically animate your back buttons in and out similar to Apple's standard UI.
 
 ### How it works:
 
