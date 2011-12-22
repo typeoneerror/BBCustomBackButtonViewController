@@ -10,7 +10,7 @@
 
 
 #define kBackButtonAnimationOffset  80.0f
-#define kBackButtonAnimationSpeed   0.25f
+#define kBackButtonAnimationSpeed   0.3f
 #define kBackButtonFrame            CGRectMake(6.0f, 6.0f, 52.0f, 31.0f)
 #define kBackButtonMarginRight      7.0f
 #define kBackButtonPadding          10.0f

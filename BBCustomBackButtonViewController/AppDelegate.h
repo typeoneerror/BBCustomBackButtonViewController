@@ -1,4 +1,4 @@
-†//
+//
 //  AppDelegate.h
 //  T1ECustomBackButton
 //
