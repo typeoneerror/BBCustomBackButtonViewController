@@ -54,8 +54,8 @@
     [super viewWillAppear:animated];
 
     NSArray *viewControllers = self.navigationController.viewControllers;
-    // only animate if being animated (avoids animation when changing tabs for instance)
-    // make sure it's being re-revealed after dismissing a modal view
+    // only animate if being animated (avoids animating when changing tabs, for example)
+    // make sure it's not being re-revealed after dismissing a modal view.
     if (animated && viewControllers.count > 1 && !self.navigationController.modalViewController)
     {
         CGFloat offset = kBackButtonAnimationOffset;
@@ -120,6 +120,8 @@
     [self addCustomBackButtonWithTitle:title];
 }
 
+// Much of this method pulled from Wolfgang Schreur's sweet UIBarButton category.
+// @see http://stackoverflow.com/a/7068222/53653
 - (void)addCustomBackButtonWithTitle:(NSString *)title
 {
     UIImage *image = [UIImage imageNamed:@"back-button"];
