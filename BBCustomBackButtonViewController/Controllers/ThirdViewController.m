@@ -28,6 +28,8 @@
 
 - (void)viewDidLoad
 {
+    self.backButtonTitle = NSLocalizedString(@"Go Back!", nil);
+
     [super viewDidLoad];
 
     [self.backButton setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];

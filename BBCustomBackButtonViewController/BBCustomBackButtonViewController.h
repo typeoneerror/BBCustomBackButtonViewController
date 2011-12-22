@@ -16,6 +16,7 @@
 }
 
 @property (retain, nonatomic) UIButton *backButton;
+@property (copy, nonatomic) NSString *backButtonTitle;
 
 // add our custom back button to the navigation bar
 // defaults to "Back"

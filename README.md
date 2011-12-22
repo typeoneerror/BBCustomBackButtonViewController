@@ -112,3 +112,14 @@ use that to determine the direction the back button needs to animate.
 
         _wasPushed = NO;
     }
+
+To use a custom title on your back button besides the title of the last controller or "Back", just assign the backButtonTitle property before calling viewDidLoad:
+
+    - (void)viewDidLoad
+    {
+        self.backButtonTitle = NSLocalizedString(@"Go Back!", nil);
+
+        [super viewDidLoad];
+
+        [self.backButton setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+    }

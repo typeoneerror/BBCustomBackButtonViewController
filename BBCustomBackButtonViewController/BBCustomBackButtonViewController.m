@@ -19,10 +19,12 @@
 @implementation BBCustomBackButtonViewController
 
 @synthesize backButton = _backButton;
+@synthesize backButtonTitle = _backButtonTitle;
 
 - (void)dealloc
 {
     [_backButton release];
+    [_backButtonTitle release];
 
     [super dealloc];
 }
@@ -37,8 +39,9 @@
     {
         // assign the title of the last controller to the back button title
         NSString *backTitle = [[viewControllers objectAtIndex:[viewControllers count] - 2] title];
-        if (backTitle != NULL)
+        if (backTitle != NULL || _backButtonTitle != NULL)
         {
+            backTitle = _backButtonTitle ? _backButtonTitle : backTitle;
             [self addCustomBackButtonWithTitle:backTitle];
         }
         else
@@ -117,6 +120,7 @@
 - (void)addCustomBackButton
 {
     NSString *title = self.title ? self.title : NSLocalizedString(@"Back", nil);
+    if (_backButtonTitle != nil) title = _backButtonTitle;
     [self addCustomBackButtonWithTitle:title];
 }
 
