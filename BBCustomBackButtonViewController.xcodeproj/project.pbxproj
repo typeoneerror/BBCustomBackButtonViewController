@@ -1,0 +1,262 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7600286C14A2AD8E00582D4F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7600286B14A2AD8E00582D4F /* UIKit.framework */; };
+		7600286E14A2AD8E00582D4F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7600286D14A2AD8E00582D4F /* Foundation.framework */; };
+		7600287014A2AD8E00582D4F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7600286F14A2AD8E00582D4F /* CoreGraphics.framework */; };
+		7600287614A2AD8E00582D4F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7600287414A2AD8E00582D4F /* InfoPlist.strings */; };
+		7600287814A2AD8E00582D4F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7600287714A2AD8E00582D4F /* main.m */; };
+		7600287C14A2AD8E00582D4F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7600287B14A2AD8E00582D4F /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7600286714A2AD8E00582D4F /* BBCustomBackButtonViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBCustomBackButtonViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7600286B14A2AD8E00582D4F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7600286D14A2AD8E00582D4F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7600286F14A2AD8E00582D4F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7600287314A2AD8E00582D4F /* BBCustomBackButtonViewController-Info.plist */ = {isa = PBXFileReference; path = "BBCustomBackButtonViewController-Info.plist"; sourceTree = "<group>"; };
+		7600287514A2AD8E00582D4F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7600287714A2AD8E00582D4F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7600287914A2AD8E00582D4F /* BBCustomBackButtonViewController-Prefix.pch */ = {isa = PBXFileReference; path = "BBCustomBackButtonViewController-Prefix.pch"; sourceTree = "<group>"; };
+		7600287A14A2AD8E00582D4F /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		7600287B14A2AD8E00582D4F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7600286414A2AD8E00582D4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7600286C14A2AD8E00582D4F /* UIKit.framework in Frameworks */,
+				7600286E14A2AD8E00582D4F /* Foundation.framework in Frameworks */,
+				7600287014A2AD8E00582D4F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7600285C14A2AD8E00582D4F = {
+			isa = PBXGroup;
+			children = (
+				7600287114A2AD8E00582D4F /* BBCustomBackButtonViewController */,
+				7600286A14A2AD8E00582D4F /* Frameworks */,
+				7600286814A2AD8E00582D4F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7600286814A2AD8E00582D4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7600286714A2AD8E00582D4F /* BBCustomBackButtonViewController.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7600286A14A2AD8E00582D4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7600286B14A2AD8E00582D4F /* UIKit.framework */,
+				7600286D14A2AD8E00582D4F /* Foundation.framework */,
+				7600286F14A2AD8E00582D4F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7600287114A2AD8E00582D4F /* BBCustomBackButtonViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7600287A14A2AD8E00582D4F /* AppDelegate.h */,
+				7600287B14A2AD8E00582D4F /* AppDelegate.m */,
+				7600287214A2AD8E00582D4F /* Supporting Files */,
+			);
+			path = BBCustomBackButtonViewController;
+			sourceTree = "<group>";
+		};
+		7600287214A2AD8E00582D4F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7600287314A2AD8E00582D4F /* BBCustomBackButtonViewController-Info.plist */,
+				7600287414A2AD8E00582D4F /* InfoPlist.strings */,
+				7600287714A2AD8E00582D4F /* main.m */,
+				7600287914A2AD8E00582D4F /* BBCustomBackButtonViewController-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7600286614A2AD8E00582D4F /* BBCustomBackButtonViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7600287F14A2AD8E00582D4F /* Build configuration list for PBXNativeTarget "BBCustomBackButtonViewController" */;
+			buildPhases = (
+				7600286314A2AD8E00582D4F /* Sources */,
+				7600286414A2AD8E00582D4F /* Frameworks */,
+				7600286514A2AD8E00582D4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BBCustomBackButtonViewController;
+			productName = BBCustomBackButtonViewController;
+			productReference = 7600286714A2AD8E00582D4F /* BBCustomBackButtonViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7600285E14A2AD8E00582D4F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Typeoneerror Studios";
+			};
+			buildConfigurationList = 7600286114A2AD8E00582D4F /* Build configuration list for PBXProject "BBCustomBackButtonViewController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7600285C14A2AD8E00582D4F;
+			productRefGroup = 7600286814A2AD8E00582D4F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7600286614A2AD8E00582D4F /* BBCustomBackButtonViewController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7600286514A2AD8E00582D4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7600287614A2AD8E00582D4F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7600286314A2AD8E00582D4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7600287814A2AD8E00582D4F /* main.m in Sources */,
+				7600287C14A2AD8E00582D4F /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7600287414A2AD8E00582D4F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7600287514A2AD8E00582D4F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7600287D14A2AD8E00582D4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7600287E14A2AD8E00582D4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7600288014A2AD8E00582D4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BBCustomBackButtonViewController/BBCustomBackButtonViewController-Prefix.pch";
+				INFOPLIST_FILE = "BBCustomBackButtonViewController/BBCustomBackButtonViewController-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7600288114A2AD8E00582D4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BBCustomBackButtonViewController/BBCustomBackButtonViewController-Prefix.pch";
+				INFOPLIST_FILE = "BBCustomBackButtonViewController/BBCustomBackButtonViewController-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7600286114A2AD8E00582D4F /* Build configuration list for PBXProject "BBCustomBackButtonViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7600287D14A2AD8E00582D4F /* Debug */,
+				7600287E14A2AD8E00582D4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7600287F14A2AD8E00582D4F /* Build configuration list for PBXNativeTarget "BBCustomBackButtonViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7600288014A2AD8E00582D4F /* Debug */,
+				7600288114A2AD8E00582D4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7600285E14A2AD8E00582D4F /* Project object */;
+}
