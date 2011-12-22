@@ -2,7 +2,7 @@ If you've done any iOS development, you know that even though many things are ve
 
 This project shows a quick method for creating a completely custom back button that does all the in/out animated goodness for you. Just set the base class of your UIViewControllers to a class like `BBCustomBackButtonViewController`. When views appear or disappear, it'll automatically animate your back buttons in and out similar to Apple's standard UI.
 
-How it works:
+### How it works:
 
 When the view loads, a custom back button is added if the navigation controller is not the first on the navigation stack:
 
@@ -77,29 +77,29 @@ automatically animates the correct direction.
 When a view is about to appear, we use a instance var to see if it was pushed off previously, and
 use that to determine the direction the back button needs to animate.
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-
-    NSArray *viewControllers = self.navigationController.viewControllers;
-    // only animate if being animated (avoids animation when changing tabs for instance)
-    // make sure it's being re-revealed after dismissing a modal view
-    if (animated && viewControllers.count > 1 && !self.navigationController.modalViewController)
+    - (void)viewWillAppear:(BOOL)animated
     {
-        CGFloat offset = kBackButtonAnimationOffset;
-        // if it was previously hidden by another controller, reverse animation direction
-        if (_wasPushed) offset *= -1;
-        CGRect frame = kBackButtonFrame;
-        frame.origin.x = offset;
-        self.backButton.frame = frame;
+        [super viewWillAppear:animated];
 
-        // animate the back button
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:kBackButtonAnimationSpeed];
-        frame.origin.x = kBackButtonFrame.origin.x;
-        self.backButton.frame = frame;
-        [UIView commitAnimations];
+        NSArray *viewControllers = self.navigationController.viewControllers;
+        // only animate if being animated (avoids animation when changing tabs for instance)
+        // make sure it's being re-revealed after dismissing a modal view
+        if (animated && viewControllers.count > 1 && !self.navigationController.modalViewController)
+        {
+            CGFloat offset = kBackButtonAnimationOffset;
+            // if it was previously hidden by another controller, reverse animation direction
+            if (_wasPushed) offset *= -1;
+            CGRect frame = kBackButtonFrame;
+            frame.origin.x = offset;
+            self.backButton.frame = frame;
+
+            // animate the back button
+            [UIView beginAnimations:nil context:NULL];
+            [UIView setAnimationDuration:kBackButtonAnimationSpeed];
+            frame.origin.x = kBackButtonFrame.origin.x;
+            self.backButton.frame = frame;
+            [UIView commitAnimations];
+        }
+
+        _wasPushed = NO;
     }
-
-    _wasPushed = NO;
-}
