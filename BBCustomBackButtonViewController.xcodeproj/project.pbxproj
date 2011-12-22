@@ -13,6 +13,15 @@
 		7600287614A2AD8E00582D4F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7600287414A2AD8E00582D4F /* InfoPlist.strings */; };
 		7600287814A2AD8E00582D4F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7600287714A2AD8E00582D4F /* main.m */; };
 		7600287C14A2AD8E00582D4F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7600287B14A2AD8E00582D4F /* AppDelegate.m */; };
+		7600288514A2ADD700582D4F /* back-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 7600288314A2ADD700582D4F /* back-button.png */; };
+		7600288614A2ADD700582D4F /* back-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7600288414A2ADD700582D4F /* back-button@2x.png */; };
+		7600289114A2ADF900582D4F /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7600288914A2ADF900582D4F /* FirstViewController.m */; };
+		7600289214A2ADF900582D4F /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7600288A14A2ADF900582D4F /* FirstViewController.xib */; };
+		7600289314A2ADF900582D4F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7600288C14A2ADF900582D4F /* SecondViewController.m */; };
+		7600289414A2ADF900582D4F /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7600288D14A2ADF900582D4F /* SecondViewController.xib */; };
+		7600289514A2ADF900582D4F /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7600288F14A2ADF900582D4F /* ThirdViewController.m */; };
+		7600289614A2ADF900582D4F /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7600289014A2ADF900582D4F /* ThirdViewController.xib */; };
+		7600289914A2AE2400582D4F /* BBCustomBackButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7600289814A2AE2400582D4F /* BBCustomBackButtonViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +29,25 @@
 		7600286B14A2AD8E00582D4F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7600286D14A2AD8E00582D4F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7600286F14A2AD8E00582D4F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		7600287314A2AD8E00582D4F /* BBCustomBackButtonViewController-Info.plist */ = {isa = PBXFileReference; path = "BBCustomBackButtonViewController-Info.plist"; sourceTree = "<group>"; };
+		7600287314A2AD8E00582D4F /* BBCustomBackButtonViewController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BBCustomBackButtonViewController-Info.plist"; sourceTree = "<group>"; };
 		7600287514A2AD8E00582D4F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7600287714A2AD8E00582D4F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7600287914A2AD8E00582D4F /* BBCustomBackButtonViewController-Prefix.pch */ = {isa = PBXFileReference; path = "BBCustomBackButtonViewController-Prefix.pch"; sourceTree = "<group>"; };
-		7600287A14A2AD8E00582D4F /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		7600287914A2AD8E00582D4F /* BBCustomBackButtonViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BBCustomBackButtonViewController-Prefix.pch"; sourceTree = "<group>"; };
+		7600287A14A2AD8E00582D4F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7600287B14A2AD8E00582D4F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7600288314A2ADD700582D4F /* back-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button.png"; path = "Images/back-button.png"; sourceTree = "<group>"; };
+		7600288414A2ADD700582D4F /* back-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button@2x.png"; path = "Images/back-button@2x.png"; sourceTree = "<group>"; };
+		7600288814A2ADF900582D4F /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = Controllers/FirstViewController.h; sourceTree = "<group>"; };
+		7600288914A2ADF900582D4F /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = Controllers/FirstViewController.m; sourceTree = "<group>"; };
+		7600288A14A2ADF900582D4F /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FirstViewController.xib; path = Controllers/FirstViewController.xib; sourceTree = "<group>"; };
+		7600288B14A2ADF900582D4F /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = Controllers/SecondViewController.h; sourceTree = "<group>"; };
+		7600288C14A2ADF900582D4F /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = Controllers/SecondViewController.m; sourceTree = "<group>"; };
+		7600288D14A2ADF900582D4F /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SecondViewController.xib; path = Controllers/SecondViewController.xib; sourceTree = "<group>"; };
+		7600288E14A2ADF900582D4F /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThirdViewController.h; path = Controllers/ThirdViewController.h; sourceTree = "<group>"; };
+		7600288F14A2ADF900582D4F /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThirdViewController.m; path = Controllers/ThirdViewController.m; sourceTree = "<group>"; };
+		7600289014A2ADF900582D4F /* ThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ThirdViewController.xib; path = Controllers/ThirdViewController.xib; sourceTree = "<group>"; };
+		7600289714A2AE2400582D4F /* BBCustomBackButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBCustomBackButtonViewController.h; sourceTree = "<group>"; };
+		7600289814A2AE2400582D4F /* BBCustomBackButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBCustomBackButtonViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +96,10 @@
 			children = (
 				7600287A14A2AD8E00582D4F /* AppDelegate.h */,
 				7600287B14A2AD8E00582D4F /* AppDelegate.m */,
+				7600289714A2AE2400582D4F /* BBCustomBackButtonViewController.h */,
+				7600289814A2AE2400582D4F /* BBCustomBackButtonViewController.m */,
+				7600288714A2ADE100582D4F /* Controllers */,
+				7600288214A2ADC700582D4F /* Images */,
 				7600287214A2AD8E00582D4F /* Supporting Files */,
 			);
 			path = BBCustomBackButtonViewController;
@@ -88,6 +114,31 @@
 				7600287914A2AD8E00582D4F /* BBCustomBackButtonViewController-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7600288214A2ADC700582D4F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7600288314A2ADD700582D4F /* back-button.png */,
+				7600288414A2ADD700582D4F /* back-button@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		7600288714A2ADE100582D4F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7600288814A2ADF900582D4F /* FirstViewController.h */,
+				7600288914A2ADF900582D4F /* FirstViewController.m */,
+				7600288A14A2ADF900582D4F /* FirstViewController.xib */,
+				7600288B14A2ADF900582D4F /* SecondViewController.h */,
+				7600288C14A2ADF900582D4F /* SecondViewController.m */,
+				7600288D14A2ADF900582D4F /* SecondViewController.xib */,
+				7600288E14A2ADF900582D4F /* ThirdViewController.h */,
+				7600288F14A2ADF900582D4F /* ThirdViewController.m */,
+				7600289014A2ADF900582D4F /* ThirdViewController.xib */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +193,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7600287614A2AD8E00582D4F /* InfoPlist.strings in Resources */,
+				7600288514A2ADD700582D4F /* back-button.png in Resources */,
+				7600288614A2ADD700582D4F /* back-button@2x.png in Resources */,
+				7600289214A2ADF900582D4F /* FirstViewController.xib in Resources */,
+				7600289414A2ADF900582D4F /* SecondViewController.xib in Resources */,
+				7600289614A2ADF900582D4F /* ThirdViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +210,10 @@
 			files = (
 				7600287814A2AD8E00582D4F /* main.m in Sources */,
 				7600287C14A2AD8E00582D4F /* AppDelegate.m in Sources */,
+				7600289114A2ADF900582D4F /* FirstViewController.m in Sources */,
+				7600289314A2ADF900582D4F /* SecondViewController.m in Sources */,
+				7600289514A2ADF900582D4F /* ThirdViewController.m in Sources */,
+				7600289914A2AE2400582D4F /* BBCustomBackButtonViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

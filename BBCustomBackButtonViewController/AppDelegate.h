@@ -1,8 +1,8 @@
 //
 //  AppDelegate.h
-//  BBCustomBackButtonViewController
+//  T1ECustomBackButton
 //
-//  Created by Benjamin Borowski on 12/21/11.
+//  Created by Benjamin Borowski on 12/20/11.
 //  Copyright (c) 2011 Typeoneerror Studios. All rights reserved.
 //
 
@@ -10,6 +10,7 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@property (retain, nonatomic) UINavigationController *navigationController;
+@property (retain, nonatomic) UIWindow *window;
 
 @end

@@ -1,19 +1,23 @@
 //
 //  AppDelegate.m
-//  BBCustomBackButtonViewController
+//  T1ECustomBackButton
 //
-//  Created by Benjamin Borowski on 12/21/11.
+//  Created by Benjamin Borowski on 12/20/11.
 //  Copyright (c) 2011 Typeoneerror Studios. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "FirstViewController.h"
+#import "SecondViewController.h"
 
 @implementation AppDelegate
 
+@synthesize navigationController = _navigationController;
 @synthesize window = _window;
 
 - (void)dealloc
 {
+    [_navigationController release];
     [_window release];
     [super dealloc];
 }
@@ -22,6 +26,12 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
+
+    UIViewController *firstViewController = [[FirstViewController new] autorelease];
+    self.navigationController = [[[UINavigationController alloc] initWithRootViewController:firstViewController] autorelease];
+
+    self.window.rootViewController = self.navigationController;
+
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
@@ -38,7 +48,7 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
     /*
-     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
      If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
      */
 }
