@@ -25,6 +25,7 @@
 
 - (void)viewDidLoad
 {
+    // only add back if not first controller
     if ([[[self navigationController] viewControllers] objectAtIndex:0] != self)
     {
         [self addCustomBackButton];
@@ -36,14 +37,18 @@
     [super viewWillAppear:animated];
 
     NSArray *viewControllers = self.navigationController.viewControllers;
+    // only animate if being animated (avoids animation when changing tabs for instance)
+    // make sure it's being re-revealed after dismissing a modal view
     if (animated && viewControllers.count > 1 && !self.navigationController.modalViewController)
     {
         CGFloat offset = kBackButtonAnimationOffset;
+        // if it was previously hidden by another controller, reverse animation direction
         if (_wasPushed) offset *= -1;
         CGRect frame = kBackButtonFrame;
         frame.origin.x = offset;
         self.backButton.frame = frame;
 
+        // animate the back button
         [UIView beginAnimations:nil context:NULL];
         [UIView setAnimationDuration:kBackButtonAnimationSpeed];
         frame.origin.x = kBackButtonFrame.origin.x;
@@ -110,6 +115,7 @@
 
 - (void)didTouchBackButton:(id)sender
 {
+    // manually pop current view
     [[self navigationController] popViewControllerAnimated:YES];
 }
 
