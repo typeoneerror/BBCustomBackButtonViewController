@@ -35,6 +35,7 @@
     // only add back if not first controller
     if ([viewControllers objectAtIndex:0] != self)
     {
+        // assign the title of the last controller to the back button title
         NSString *backTitle = [[viewControllers objectAtIndex:[viewControllers count] - 2] title];
         if (backTitle != NULL)
         {
@@ -42,6 +43,7 @@
         }
         else
         {
+            // no title so use the default
             [self addCustomBackButton];
         }
     }
