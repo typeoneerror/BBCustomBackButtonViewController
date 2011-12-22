@@ -2,6 +2,8 @@ If you've done any iOS development, you know that even though many things are ve
 
 This project shows a quick method for creating a completely custom back button that does all the in/out animated goodness for you. Just set the base class of your UIViewControllers to a class that extends [BBCustomBackButtonViewController](https://github.com/typeoneerror/BBCustomBackButtonViewController/blob/master/BBCustomBackButtonViewController/BBCustomBackButtonViewController.m). When views appear or disappear, it'll automatically animate your back buttons in and out similar to Apple's standard UI and you can fully customize the look of the text and button since it's just a UIButton behind.
 
+![Second](https://github.com/typeoneerror/BBCustomBackButtonViewController/raw/master/BBCustomBackButtonViewController/Images/second.png "Second")
+
 ### How it works:
 
 When the view loads, a custom back button is added if the navigation controller is not the first on the navigation stack:
@@ -52,6 +54,9 @@ automatically animates in the correct direction, emulating the Apple animation t
         if (animated && [viewControllers objectAtIndex:viewControllers.count - 1] != self)
         {
             CGFloat offset;
+
+            // This segment care of Sbrocket.
+            // @see http://stackoverflow.com/a/1816682/53653
             if (viewControllers.count > 1 && [viewControllers objectAtIndex:viewControllers.count - 2] == self)
             {
                 // View is disappearing because a new view controller was pushed onto the stack

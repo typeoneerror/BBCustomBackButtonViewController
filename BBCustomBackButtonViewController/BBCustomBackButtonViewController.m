@@ -87,6 +87,9 @@
     if (animated && [viewControllers objectAtIndex:viewControllers.count - 1] != self)
     {
         CGFloat offset;
+
+        // This segment care of Sbrocket.
+        // @see http://stackoverflow.com/a/1816682/53653
         if (viewControllers.count > 1 && [viewControllers objectAtIndex:viewControllers.count - 2] == self)
         {
             // View is disappearing because a new view controller was pushed onto the stack
