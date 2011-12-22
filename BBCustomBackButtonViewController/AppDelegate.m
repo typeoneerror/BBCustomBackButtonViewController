@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  T1ECustomBackButton
+//  BBCustomBackButtonViewController
 //
 //  Created by Benjamin Borowski on 12/20/11.
 //  Copyright (c) 2011 Typeoneerror Studios. All rights reserved.
