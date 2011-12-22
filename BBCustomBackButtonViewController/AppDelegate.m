@@ -31,9 +31,9 @@
     self.navigationController = [[[UINavigationController alloc] initWithRootViewController:firstViewController] autorelease];
 
     self.window.rootViewController = self.navigationController;
-
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+
     return YES;
 }
 

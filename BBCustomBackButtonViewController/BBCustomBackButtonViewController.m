@@ -10,8 +10,10 @@
 
 
 #define kBackButtonAnimationOffset  80.0f
-#define kBackButtonAnimationSpeed   0.2f
+#define kBackButtonAnimationSpeed   0.25f
 #define kBackButtonFrame            CGRectMake(6.0f, 6.0f, 52.0f, 31.0f)
+#define kBackButtonMarginRight      7.0f
+#define kBackButtonPadding          10.0f
 
 
 @implementation BBCustomBackButtonViewController
@@ -21,14 +23,27 @@
 - (void)dealloc
 {
     [_backButton release];
+
+    [super dealloc];
 }
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
+
+    NSArray *viewControllers = [[self navigationController] viewControllers];
     // only add back if not first controller
-    if ([[[self navigationController] viewControllers] objectAtIndex:0] != self)
+    if ([viewControllers objectAtIndex:0] != self)
     {
-        [self addCustomBackButton];
+        NSString *backTitle = [[viewControllers objectAtIndex:[viewControllers count] - 2] title];
+        if (backTitle != NULL)
+        {
+            [self addCustomBackButtonWithTitle:backTitle];
+        }
+        else
+        {
+            [self addCustomBackButton];
+        }
     }
 }
 
@@ -45,6 +60,7 @@
         // if it was previously hidden by another controller, reverse animation direction
         if (_wasPushed) offset *= -1;
         CGRect frame = kBackButtonFrame;
+        frame.size.width = self.backButton.frame.size.width;
         frame.origin.x = offset;
         self.backButton.frame = frame;
 
@@ -84,6 +100,8 @@
 
         CGRect frame = kBackButtonFrame;
         frame.origin.x = offset;
+        frame.size.width = self.backButton.frame.size.width;
+
         [UIView beginAnimations:nil context:NULL];
         [UIView setAnimationDuration:kBackButtonAnimationSpeed];
         self.backButton.frame = frame;
@@ -93,24 +111,40 @@
 
 - (void)addCustomBackButton
 {
-    // create back button
-    UIImage *buttonImage = [UIImage imageNamed:@"back-button.png"];
-    UIButton *button = [[[UIButton alloc] initWithFrame:
-                         CGRectMake(0, 0, buttonImage.size.width, buttonImage.size.height)] autorelease];
-    [button setBackgroundImage:buttonImage forState:UIControlStateNormal];
-    [button setAdjustsImageWhenHighlighted:YES];
-    [button setAdjustsImageWhenDisabled:YES];
+    NSString *title = self.title ? self.title : NSLocalizedString(@"Back", nil);
+    [self addCustomBackButtonWithTitle:title];
+}
+
+- (void)addCustomBackButtonWithTitle:(NSString *)title
+{
+    UIImage *image = [UIImage imageNamed:@"back-button"];
+    image = [image stretchableImageWithLeftCapWidth:14.0f topCapHeight:0.0f];
+    UIFont *font = [UIFont boldSystemFontOfSize:12.0f];
+
+    CGSize textSize = [title sizeWithFont:font];
+    CGSize buttonSize = CGSizeMake(textSize.width + kBackButtonPadding * 2, image.size.height);
+
+    UIButton *button = [[[UIButton alloc] initWithFrame:CGRectMake(0.0f, 0.0f, buttonSize.width, buttonSize.height)] autorelease];
     [button addTarget:self action:@selector(didTouchBackButton:) forControlEvents:UIControlEventTouchUpInside];
+    [button setBackgroundImage:image forState:UIControlStateNormal];
+    [button setTitle:title forState:UIControlStateNormal];
 
-    // add back button to left bar button slot
-    UIBarButtonItem *backButton = [[[UIBarButtonItem alloc] initWithCustomView:button] autorelease];
-    [[self navigationItem] setLeftBarButtonItem:backButton];
+    [button.titleLabel setFont:font];
+    [button.titleLabel setShadowOffset:CGSizeMake(0, -1)];
 
-    // save the back button so we can animate it later
+    // defaults are bright to show demo
+    // override in viewDidLoad by accessing self.backButton
+    [button setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
+    [button setTitleShadowColor:[UIColor colorWithRed:67.0f/255.0f green:3.0f/255.0f blue:38.0f/255.0f alpha:1.0f] forState:UIControlStateNormal];
+
+    CGFloat margin = floorf((button.frame.size.height - textSize.height) / 2);
+    CGFloat marginRight = kBackButtonMarginRight;
+    CGFloat marginLeft = button.frame.size.width - textSize.width - marginRight;
+    [button setTitleEdgeInsets:UIEdgeInsetsMake(margin, marginLeft, margin, marginRight)];
+
+    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithCustomView:button] autorelease];
+    [self.navigationItem.leftBarButtonItem setWidth:buttonSize.width];
     self.backButton = button;
-
-    // hide the normal back button
-    [[self navigationItem] setHidesBackButton:YES];
 }
 
 - (void)didTouchBackButton:(id)sender

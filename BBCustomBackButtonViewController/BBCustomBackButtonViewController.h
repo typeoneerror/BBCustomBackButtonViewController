@@ -15,10 +15,14 @@
     BOOL _wasPushed;
 }
 
-@property (nonatomic, retain) UIButton *backButton;
+@property (retain, nonatomic) UIButton *backButton;
 
 // add our custom back button to the navigation bar
+// defaults to "Back"
 - (void)addCustomBackButton;
+
+// add custom back button with custom title
+- (void)addCustomBackButtonWithTitle:(NSString *)title;
 
 // user tapped the custom back button
 - (void)didTouchBackButton:(id)sender;

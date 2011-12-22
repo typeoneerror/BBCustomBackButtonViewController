@@ -25,6 +25,7 @@
 - (void)dealloc
 {
     [_nextButton release];
+
     [super dealloc];
 }
 
@@ -33,11 +34,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    self.title = @"First Controller";
 }
 
 - (void)viewDidUnload
 {
     [self setNextButton:nil];
+
     [super viewDidUnload];
 }
 

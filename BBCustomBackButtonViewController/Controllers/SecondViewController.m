@@ -25,6 +25,7 @@
 - (void)dealloc
 {
     [_nextButton release];
+
     [super dealloc];
 }
 
@@ -38,6 +39,7 @@
 - (void)viewDidUnload
 {
     [self setNextButton:nil];
+
     [super viewDidUnload];
 }
 

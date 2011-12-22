@@ -29,6 +29,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    [self.backButton setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
 }
 
 - (void)viewDidUnload
