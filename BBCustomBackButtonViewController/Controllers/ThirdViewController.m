@@ -33,6 +33,7 @@
     [super viewDidLoad];
 
     [self.backButton setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+    [self.backButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
 }
 
 - (void)viewDidUnload

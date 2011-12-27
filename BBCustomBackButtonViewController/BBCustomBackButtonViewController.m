@@ -1,6 +1,5 @@
 //
 //  BBCustomBackButtonViewController.m
-//  BBCustomBackButtonViewController
 //
 //  Created by Benjamin Borowski on 12/20/11.
 //  Copyright (c) 2011 Typeoneerror Studios. All rights reserved.
@@ -8,11 +7,15 @@
 
 #import "BBCustomBackButtonViewController.h"
 
-
+// how far does the back button animation left and right
 #define kBackButtonAnimationOffset  80.0f
+// how fast does the animation happen
 #define kBackButtonAnimationSpeed   0.3f
+// standard back button origin and size
 #define kBackButtonFrame            CGRectMake(6.0f, 6.0f, 52.0f, 31.0f)
+// margin added to back button
 #define kBackButtonMarginRight      7.0f
+// padding added to back button
 #define kBackButtonPadding          10.0f
 
 
@@ -89,7 +92,7 @@
     // If view is disappearing but still in stack, we can assume a modal is hiding it.
     if (animated && [viewControllers objectAtIndex:viewControllers.count - 1] != self)
     {
-        CGFloat offset;
+        CGFloat offset = 0.0f;
 
         // This segment care of Sbrocket.
         // @see http://stackoverflow.com/a/1816682/53653
